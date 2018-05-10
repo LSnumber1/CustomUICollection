@@ -46,11 +46,10 @@ extension ViewController {
         flowLayout.minimumInteritemSpacing = 10
         //用于单元格的默认大小
         flowLayout.itemSize = CGSize.init(width: width, height: height)
-        //用于节标题的默认大小
+        //用于标题的默认大小
         flowLayout.headerReferenceSize = CGSize.init(width: self.view.frame.width, height: 50)
         myCollectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        myCollectionView.register(UINib.init(nibName: "EditCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: EditCollectionViewCell.forCellReuseIdentifier) 
-        
+        myCollectionView.register(UINib.init(nibName: "EditCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: EditCollectionViewCell.forCellReuseIdentifier)
         myCollectionView.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.forCellReuseIdentifier)
         myCollectionView.contentInset = UIEdgeInsets.init(top: 44, left: 0, bottom: 0, right: 0)
         myCollectionView.backgroundColor = UIColor.white
